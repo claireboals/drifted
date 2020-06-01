@@ -57,8 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title, style: TextStyle(color: Colors.brown[600])),
-        
+        title: Align(alignment: Alignment.topRight, 
+        child: Text(widget.title, style: TextStyle(color: Colors.brown[600]))),
       ),
       
       body: ListView(
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
             padding: const EdgeInsets.all(15.0),
             height: 120,
-            color: Colors.amber[100],
+            color: Colors.lightBlue[50],
             child: Stack(
               children: <Widget>[
                 Align(
@@ -83,6 +83,40 @@ class _MyHomePageState extends State<MyHomePage> {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Text("Called Mom 5 days ago")
+                ),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Icon(Icons.directions_boat, size: 50)
+                ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Icon(Icons.contact_phone, size: 50),  
+                ),
+              ],
+            )
+          ),
+          Container(
+            height: 20,
+            color: Colors.white,
+          ),
+          Container(
+            padding: const EdgeInsets.all(15.0),
+            height: 120,
+            color: Colors.lightBlue[50],
+            child: Stack(
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Column(
+                    children: <Widget>[
+                      Icon(Icons.person_pin, size: 50),
+                      Text('Jeff')
+                    ],
+                  )
+                ),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text("Texted Jeff 3 min ago")
                 ),
                 Align(
                   alignment: Alignment.topCenter,
