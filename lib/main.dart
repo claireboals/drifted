@@ -60,20 +60,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title, style: TextStyle(color: Colors.brown[600])),
         
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
+      body: ListView(
+        padding: const EdgeInsets.all(20),
+        children: <Widget>[
+          Container(
+            height: 110,
+            color: Colors.amber[100],
+            child: const Center(child: Text('Entry A')),
+          ),
+        ]),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
