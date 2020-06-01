@@ -60,15 +60,45 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title, style: TextStyle(color: Colors.brown[600])),
         
       ),
+      
       body: ListView(
         padding: const EdgeInsets.all(20),
+        
         children: <Widget>[
           Container(
-            height: 110,
+            padding: const EdgeInsets.all(15.0),
+            height: 120,
             color: Colors.amber[100],
-            child: const Center(child: Text('Entry A')),
+            child: Stack(
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Column(
+                    children: <Widget>[
+                      Icon(Icons.person_pin, size: 50),
+                      Text('Mom')
+                    ],
+                  )
+                ),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text("Called Mom 5 days ago")
+                ),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Icon(Icons.directions_boat, size: 50)
+                ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Icon(Icons.contact_phone, size: 50),  
+                ),
+              ],
+            )
           ),
-        ]),
+        ],
+
+      ),
+      
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
